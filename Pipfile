@@ -8,6 +8,8 @@ anki = "*"
 aqt = "*"
 genanki = "*"
 pypdf2 = "*"
+anytree = "*"
+treelib = "*"
 
 [dev-packages]
 
