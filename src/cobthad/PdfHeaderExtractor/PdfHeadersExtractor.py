@@ -79,7 +79,7 @@ class PdfHeadersExtractor:
 
         return self._headers
 
-    def _convert_outlines_to_headers(self, outlines: any) -> list[Node]:
+    def _convert_outlines_to_headers(self, outlines) -> list:
         output = []
         for outline in outlines:
 
