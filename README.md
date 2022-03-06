@@ -15,7 +15,7 @@ The hierarchical anki deck as output:
 
 ## Download
 
-Install this with Anki download code 2132327811.
+Install this with Anki download code [1837105369](https://ankiweb.net/shared/info/1837105369).
 
 ## Use
 
