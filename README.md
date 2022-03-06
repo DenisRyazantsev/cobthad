@@ -1,5 +1,4 @@
-# Cobthad
-Cobthad is the acronym of ***C***onverter ***O***f ***B***ook ***T***o ***H***ierarchical ***A***nki ***D***eck.
+# Converter Of Book To Hierarchical Anki Deck
 
 The [anki add-on](https://addon-docs.ankiweb.net/) to convert chapter titles (headers) of book to a hierarchical 
 anki deck.
@@ -20,7 +19,9 @@ Install this with Anki download code 123123123.
 
 ## Use
 
-Click an action "Convert a PDF file to a hierarchical deck" from the "Tools" menu.
+Click on an action "Convert a PDF file to a hierarchical deck" from the "Tools" menu.
+
+![](resources/action-example.png)
 
 ## Motivation
 
