@@ -1,0 +1,14 @@
+{
+  "display_name": "Converter Of Book To Hierarchical Anki Deck",
+  "module_name": "cobthad",
+  "repo_name": "cobthad",
+  "ankiweb_id": "2132327811",
+  "author": "Metacodeine",
+  "contact": "metacodeine@gmail.com",
+  "homepage": "https://github.com/DenisRyazantsev/cobthad",
+  "tags": "converter book headers titles contents hierarchical deck",
+  "conflicts": [],
+  "targets": [
+    "anki21"
+  ]
+}
