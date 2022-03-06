@@ -4,12 +4,10 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-anki = "*"
-aqt = "*"
-genanki = "*"
-pypdf2 = "*"
-anytree = "*"
-treelib = "*"
+genanki = ">=0.13.0"
+pypdf2 = ">=1.26.0"
+anytree = ">=2.8.0"
+treelib = ">=1.6.1"
 
 [dev-packages]
 
