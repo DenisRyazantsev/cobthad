@@ -1,29 +1,25 @@
-import tkinter
-from tkinter import filedialog
 from aqt import mw
 from aqt.qt import *
 from aqt.utils import showInfo
 
-from .HeadersFormatter.HeadersFormatter import *
-from .PdfHeaderExtractor.PdfHeadersExtractor import *
+from src.PdfHeaderExtractor.PdfHeadersExtractor import *
+from PyQt5 import QtCore, QtWidgets
 
-
-def test_function() -> None:
-    # Hide a tkinter window.
-    root = tkinter.Tk()
-    root.withdraw()
+def convert_pdf_file_to_deck() -> None:
 
     # Request a file.
-    file = filedialog.askopenfile(mode='r', filetypes=[('Pdf Files', '*.pdf')], initialdir=os.path.expanduser("~"))
+    file, _ = QtWidgets.QFileDialog.getOpenFileName(
+        QtWidgets.QMainWindow(),
+        "Pdf Files",
+        QtCore.QDir.homePath(),
+        "Pdf Files (*.pdf)"
+    )
 
-    if str(file) == "None":
+    if not file:
         return
 
-    # Close an input stream. We need only a file name.
-    file.close()
-
     try:
-        extractor = PdfHeadersExtractor(file.name)
+        extractor = PdfHeadersExtractor(file)
     except ValueError as e:
         showInfo(str(e))
         return
@@ -62,9 +58,10 @@ def _create_hierarchical_deck(headers: Node):
         mw.col.decks.id(deck_name)
 
 
-# create a new menu item, "test"
-action = QAction("test", mw)
-# set it to call testFunction when it's clicked
-qconnect(action.triggered, test_function)
-# and add it to the tools menu
-mw.form.menuTools.addAction(action)
+def load():
+    # Create a new menu item.
+    action = QAction("Convert a PDF file to a hierarchical deck", mw)
+    # Set it to call convert_pdf_file_to_deck when it's clicked.
+    qconnect(action.triggered, convert_pdf_file_to_deck)
+    # And add it to the tools menu.
+    mw.form.menuTools.addAction(action)
