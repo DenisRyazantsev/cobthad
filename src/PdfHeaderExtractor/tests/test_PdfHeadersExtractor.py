@@ -1,8 +1,6 @@
 from unittest import TestCase
-
 from anytree import Node
-
-from PdfHeaderExtractor.PdfHeadersExtractor import PdfHeadersExtractor
+from PdfHeadersExtractor import PdfHeadersExtractor
 
 
 class TestPdfHeadersExtractor(TestCase):

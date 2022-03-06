@@ -3,7 +3,6 @@ from typing import Optional
 
 from PyPDF2 import PdfFileReader
 from PyPDF2.generic import Destination
-
 from anytree import Node
 
 
