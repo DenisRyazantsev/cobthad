@@ -1,6 +1,6 @@
 import sys
 from os.path import dirname, join
-from src import main
+from . import main
 
 # Import local libs
 sys.path.append(join(dirname(__file__), "libs"))

@@ -2,7 +2,7 @@ from aqt import mw
 from aqt.qt import *
 from aqt.utils import showInfo
 
-from src.PdfHeaderExtractor.PdfHeadersExtractor import *
+from src.cobthad.PdfHeaderExtractor.PdfHeadersExtractor import *
 from PyQt5 import QtCore, QtWidgets
 
 def convert_pdf_file_to_deck() -> None:
